@@ -12,4 +12,5 @@ public class AgeDefinerTest {
         Person person = new Person("asan", localDate, Person.Sex.FEMALE,"asan@gmail.com");
         Assert.assertTrue(ageDefiner.test(person));
     }
+
 }

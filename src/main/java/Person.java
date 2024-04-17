@@ -114,6 +114,7 @@ public class Person implements CheckPerson {
         public boolean test(Person p) {
             return p.getAge() >= 18 && p.getAge() <= 36;
         }
+
     }
 
 
@@ -135,4 +136,35 @@ public class Person implements CheckPerson {
         }
     }
 
+    public static void main(String[] args) {
+        String name = "asan";
+        String reverseName = "";
+        for (int i = name.length() - 1; i >= 0; i--) {
+            reverseName += name.charAt(i);
+        }
+        System.out.println(reverseName);
+
+
+        //find occurence
+        String s1 = "aabbaccddee";  //3a2b2c2d2e
+        String s2 = "";
+        int count = 0;
+        for (int i = 0; i < s1.length(); i++) {
+            count = 0;
+            if (!s2.contains(s1.charAt(i) + "")) {
+                for (int j = 0; j < s1.length(); j++) {
+                    if (s1.charAt(i) == s1.charAt(j)) {
+                        count++;
+                    }
+                }
+            }
+            if (count > 0) {
+                s2 += count + (s1.charAt(i) + "");
+            }
+
+
+        }
+        System.out.println(s2);
+
+    }
 }
